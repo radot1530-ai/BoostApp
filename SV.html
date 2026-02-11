@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Pour Toi ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink:#ff5e8e;
+    --purple:#7c4dff;
+    --dark:#0f0f0f;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,var(--dark),var(--purple));
+    color:#fff;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    padding:70px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+section.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h1,h2{
+    font-family:'Playfair Display',serif;
+}
+
+h1{font-size:2.5rem;}
+h2{font-size:2rem;color:#ffd6e4;}
+
+p{
+    max-width:750px;
+    font-size:1.15em;
+    line-height:1.8;
+}
+
+button{
+    margin-top:35px;
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(135deg,var(--pink),var(--purple));
+    color:white;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+button:hover{transform:scale(1.08);}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin-top:40px;
+}
+.gallery img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+video{
+    max-width:90%;
+    border-radius:25px;
+    margin-top:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.heart{
+    position:fixed;
+    top:-10px;
+    font-size:22px;
+    animation:fall linear infinite;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* ----------------- Pixel art hearts ----------------- */
+/* ===== PIXEL HEART FIX ===== */
+#heart-name {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+#heart-name div {
+    white-space: nowrap;
+    height: 26px;
+}
+
+.heart-particle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 26px;
+    height: 26px;
+
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* ===== HEART BEATING PNG ===== */
+.heartbeat-container {
+    margin-top: 30px;
+}
+
+.heartbeat {
+    width: 120px; /* chanje gwosè si ou vle */
+    animation: heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat {
+    0%   { transform: scale(1); }
+    20%  { transform: scale(1.15); }
+    40%  { transform: scale(1); }
+    60%  { transform: scale(1.25); }
+    80%  { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bg-music" loop>
+    <source src="/image/[FREE]_Acoustic_Guitar_Type_Beat__Better_Me___Sad_R_B_Hip_Hop_Instrumental_(48k)" type="audio/mpeg">
+</audio>
+
+<section class="visible">
+    <h1>Salut Kerv ❤️</h1>
+    <p>Gen kèk mo ki pa fasil pou di… men jodi a mwen chwazi di yo ak kè mwen.</p>
+    <button onclick="scrollToNext()">Découvrir la surprise</button>
+</section>
+
+<section>
+    <h2>Amitye nou</h2>
+    <p>
+        Depi lè nou vin zanmi, ou pran yon plas espesyal nan lavi mwen.  
+        Mwen swete amitye sa a kontinye, malgre tout bagay 🤍
+    </p>
+</section>
+
+<section>
+    <p>
+        KERVLINE, ou se yon moun ki bay lanmou san mezire.  
+        Se youn nan pi bon kalite ou genyen 🌸
+    </p>
+</section>
+
+<section>
+    <p>
+        Mwen swete ou toujou kontinye souri 😀  
+        Se pou lanmou antoure ou chak jou a lenfini ♾️
+    </p>
+</section>
+
+<section>
+    <h2>Souvenirs</h2>
+    <div class="gallery">
+        <img src="/image/IMG-20260120-WA0004 (1).jpg" alt="Souvenir">
+        <img src="/image/1770581838806.png" alt="Souvenir">
+        <img src="/image/IMG-20260120-WA0004 (1).jpg" alt="Souvenir">
+    </div>
+</section>
+
+<section>
+    <h2>Un message pour toi 🎥</h2>
+    <p>Pafwa imaj pale pi fò pase mo…</p>
+    <video controls>
+        <source src="/image/VID-20260129-WA0075.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section>
+    <h2>Peu importe tout…</h2>
+    <p>
+        Kit nou fache, kit nou lwen,  
+        ou ap toujou enpòtan pou mwen.
+    </p>
+    <h1>Bonne Saint-Valentin ❤️</h1>
+    <div class="heartbeat-container">
+    <img src="/image/1770585386399.png" alt="Heart" class="heartbeat">
+</div>
+    <div id="heart-name"></div>
+</section>
+
+<script>
+// -------------------- Scroll & music --------------------
+const sections = document.querySelectorAll("section");
+const music = document.getElementById("bg-music");
+music.volume = 0.25;
+
+window.addEventListener("scroll", () => {
+    sections.forEach(s => {
+        if (s.getBoundingClientRect().top < window.innerHeight - 120) {
+            s.classList.add("visible");
+        }
+    });
+});
+
+function scrollToNext(){
+    if(music.paused){
+        music.play().catch(()=>{});
+    }
+    sections[1].scrollIntoView({behavior:"smooth"});
+}
+
+// -------------------- Pluie de cœurs --------------------
+setInterval(() => {
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.textContent = ["💖","💗","💞","💕","❤️"][Math.floor(Math.random()*5)];
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.animationDuration = (Math.random() * 4 + 4) + "s";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 8000);
+}, 400);
+
+</script>
+</body>
+</html>
